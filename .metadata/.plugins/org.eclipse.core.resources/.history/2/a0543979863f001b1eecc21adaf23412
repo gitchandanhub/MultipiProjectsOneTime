@@ -1,0 +1,42 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class CreateLesseeRecord extends AppDriver
+
+
+{
+
+	
+	public CreateLesseeRecord()
+	{
+		 PageFactory.initElements(driver, this);
+	}	 
+	
+	@FindBy(xpath = "//*[@id=\"menu-content\"]/li[5]/a/span")  WebElement Lesseetab;
+	@FindBy(xpath = "//*[@id=\"nav-tabContent\"]/div/div/div[1]/div/ol/div[3]/a")  WebElement Createnewlist;
+	@FindBy(id= "customer_type")  WebElement Customertype;
+
+
+	public void Lesseetab() throws InterruptedException 
+	 {
+		Lesseetab.click();
+	     Thread.sleep(1000);
+	     log.info("Click on Lessee tab");
+	     System.out.println("Click on Lessee tab");
+	 }
+	
+	public void Createnewlist() throws InterruptedException 
+	 {
+		Createnewlist.click();
+	     Thread.sleep(1000);
+	     log.info("Click on Createnewlist");
+	     System.out.println("Click on Createnewlist");
+	 }
+	
+	
+}

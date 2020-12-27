@@ -1,0 +1,26 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import BaseDriver.AppDriver;
+
+public class Createmultiplequotefordifferentvehicle extends AppDriver
+{
+	public Createmultiplequotefordifferentvehicle()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	//Customer Data
+	@FindBy(id ="sales_person") WebElement sales_person;
+	
+	
+	public void selectSalesPerson()
+	{
+		Select salesperson = new Select(sales_person);
+		salesperson.selectByIndex(1);
+	}
+}

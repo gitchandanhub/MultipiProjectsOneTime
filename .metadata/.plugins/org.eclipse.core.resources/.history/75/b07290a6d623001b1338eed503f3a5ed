@@ -1,0 +1,17 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class Createmultiplequotefordifferentvehicle extends AppDriver
+{
+	public Createmultiplequotefordifferentvehicle()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(id ="sales_person") WebElement sales_person;
+}

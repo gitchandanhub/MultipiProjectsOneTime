@@ -1,0 +1,119 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class singlequote extends AppDriver
+
+{
+	public singlequote()
+	{
+		 PageFactory.initElements(driver, this);
+	}	 
+	
+	@FindBy(xpath = "//*[@id=\'menu-content\']/li[3]/a")  WebElement Quotaiontab;
+	@FindBy(id= "quote_selection")  WebElement QuoteSelection;
+	@FindBy(xpath = "//body/div[@id='container-fluid-main']/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/h5[2]")  WebElement Singlequoteselected;
+	 @FindBy(id= "submit_selection")  WebElement Submitselection;
+	 @FindBy(xpath = "//*[@id=\"form-save-quotation\"]/div/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div/div/div/button/div/div/div")  WebElement Salesperson;
+	 @FindBy(xpath = "//*[@id=\"sales_person\"]/option[2]")  WebElement SelectAdminsalesperson;
+	 @FindBy(id= "customer_id")  WebElement customerno;
+	 @FindBy(id= "customer_name")  WebElement customername;
+	 @FindBy(id= "customer_address")  WebElement customeraddress;
+	 @FindBy(id= "customer_address_2")  WebElement customeraddress2;
+	 @FindBy(id= "customer_city")  WebElement customercity;
+	 @FindBy(id= "customer_zip")  WebElement customerzip;
+	 @FindBy(xpath = "//*[@id=\"form-save-quotation\"]/div/div/div[2]/div[1]/div[1]/div[5]/div[2]/div/div/div/div/button/div/div/div")  WebElement Stateoptions;
+	 @FindBy(xpath = "//*[@id=\"bs-select-2-52\"]/span")  WebElement customerstate;
+	 @FindBy(id= "contact_name_1")  WebElement ContactName;
+	 @FindBy(id= "email_address")  WebElement CustomerEmail;
+	 @FindBy(id= "cell_tel")  WebElement CustomerCellno;
+	 
+	 //Lease Data
+	 
+	 @FindBy(id= "del_acq_date")  WebElement DelacqDate;
+	 
+	 
+	 @FindBy(id= "lease_type")  WebElement Leasetype;
+	 @FindBy(xpath = "//option[. = 'Open']")  WebElement SelectLeaseType;
+	
+	 
+	 
+	 
+	 //Term and SalesTax Data
+	 
+	 @FindBy(id= "Term")  WebElement Term;
+	 @FindBy(xpath = "//option[contains(text(),'72')]")  WebElement SelectTerm;
+	// @FindBy(id= "Term")  WebElement Termselected;
+	 @FindBy(xpath = "//*[@id=\"form-save-quotation\"]/div/div/div[2]/div[2]/div[2]/div[2]/div/table/tbody/tr[2]/td[2]/div/button/div/div/div")  WebElement SalesTaxstateoption;
+	 @FindBy(xpath = "//option[. = 'WY - Wyoming']")  WebElement salestaxstate;
+	 @FindBy(id= "SalesTaxRateState")  WebElement Salestaxrate;
+	
+	
+	//Vehicle data
+	 
+	 @FindBy(id= "year")  WebElement Vehicleyear;
+	 @FindBy(xpath = "//*[@id=\"year\"]/option[4]")  WebElement Selectvehicleyear;
+	 @FindBy(id= "make")  WebElement Vehiclemake;
+	 @FindBy(xpath = "//*[@id=\"make\"]/option[10]")  WebElement Selectvehiclemake;
+	 @FindBy(id= "model")  WebElement Vehiclemodel;
+	 @FindBy(xpath = "//*[@id=\"model\"]/option[6]")  WebElement Selectvehiclemodel;
+	 @FindBy(id= "new_used")  WebElement Vehicleneworused;
+	 @FindBy(xpath = "//*[@id=\"new_used\"]/option[2]")  WebElement Selectvehicleused;
+	 @FindBy(id= "color")  WebElement Vehiclecolor;
+	 @FindBy(xpath = "//*[@id=\"color\"]/option[2]")  WebElement Selectvehiclecolor;
+	 @FindBy(xpath= "//select[@id='int_color']")  WebElement Vehicleintcolor;
+	 @FindBy(xpath = "//*[@id=\"int_color\"]/option[8]")  WebElement Selectvehicleintcolor;
+	 @FindBy(xpath = "//*[@id=\"form-save-quotation\"]/div/div/div[2]/div[1]/div[4]/div[5]/div[2]/div/div/div/div/button/div/div/div")  WebElement vehicleordertype;
+	 @FindBy(xpath = "//*[@id='form-save-quotation']/div/div/div[2]/div[1]/div[5]/div[5]/div[2]/div/div/div/div/button") WebElement vehicleordertype1;
+//	 @FindBy(xpath = "//select[@id='order_type']") WebElement vehicleordertype;
+//	 @FindBy(xpath = "*[@id = 'order_type']/option[1]") WebElement vehicleordertype1;
+	 @FindBy(xpath = "//*[@id=\"bs-select-3-2\"]/span")  WebElement Selectvehicleordertype;
+	 @FindBy(xpath = "//*[@id=\"form-save-quotation\"]/div/div/div[2]/div[1]/div[4]/div[5]/div[4]/div/div/div/div/button/div/div/div")  WebElement vehiclestate;
+	 @FindBy(xpath = "//*[@id='form-save-quotation']/div/div/div[2]/div[1]/div[5]/div[5]/div[4]/div/div/div/div/button") WebElement vehiclestate1;
+	 @FindBy(xpath = "//*[@id='//*[@id='bs-select-5-5']/span")  WebElement Selectvehiclestate;
+	 @FindBy(xpath = "//*[@id=//*[@id='form-save-quotation']/div/div/div[2]/div[1]/div[5]/div[5]/div[6]/div/div/div/div/button")  WebElement vehicleplatetype;
+	 @FindBy(xpath = "//*[@id='//*[@id='bs-select-6-4']/span")  WebElement Selectvehicleplatetype;
+	 
+	 //Rates
+	 
+	 @FindBy(id= "FactoryMSRP")  WebElement factorymsrp;
+	 @FindBy(id= "AdditionalMSRP")  WebElement additionalmsrp;
+	 @FindBy(id= "DealerCost")  WebElement dealercost;
+	 @FindBy(id= "BankFee")  WebElement bankfee;
+	 @FindBy(id= "ResidualValue")  WebElement residualvalue;
+	 @FindBy(id= "exampleFormControlTextarea1")  WebElement Cusomternotes;
+	 
+	 //Save Quotation
+	 @FindBy(id= "save_quotation")  WebElement savequotation;
+	
+	
+	public void OpenQuotationtab() throws InterruptedException
+	 
+	 {
+		 Quotaiontab.click();
+		 Thread.sleep(1000);
+	     log.info("Quotation Tab clicked");
+	     System.out.println("Quotation Tab clicked");
+	 }
+	
+	public void Quotetypeselection() throws InterruptedException 
+	 {
+		 QuoteSelection.click();
+	     Thread.sleep(1000);
+	     log.info("Quotation Selection options opened");
+	     System.out.println("Quotation Selection option opened");
+	 }
+	
+	public void SubmitSinglequote() throws InterruptedException 
+	 {
+		 Submitselection.click();
+	     Thread.sleep(1000);
+	     log.info("Create Single Quote form is opened");
+	     System.out.println("Create Single Quote form is opened");
+	 }
+	
+}

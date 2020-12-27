@@ -1,0 +1,33 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class ApproveSingleQuote1 extends AppDriver
+
+{
+
+	public ApproveSingleQuote1()
+	{
+		 PageFactory.initElements(driver, this);
+	}
+	
+	
+	@FindBy(xpath = "//span[contains(text(),'Quotations')]")  WebElement SwitchQuotaiontab;
+	@FindBy(xpath = "//a[contains(text(),'Active Prospects')]")  WebElement ClickActiveprospect;
+	@FindBy(xpath = "//*[@id=\"DataTables_Table_0\"]/tbody/tr[1]/td[10]/a[2]")  WebElement EditSingleQuote;
+	@FindBy(xpath= "//*[@id=\"cotb_edit\"]/div[5]/div/table/tbody/tr[5]/td/button/i")  WebElement ApprovesingQuotation;
+	
+	public void test(String test1) throws InterruptedException
+	
+	{
+		SwitchQuotaiontab.click();
+		
+	}
+	
+}
+
+

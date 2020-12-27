@@ -1,0 +1,46 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class CreateBuyersRecord extends AppDriver
+
+
+{
+
+	
+	public CreateBuyersRecord()
+	{
+		 PageFactory.initElements(driver, this);
+	}	 
+	
+	@FindBy(xpath = "//*[@id=\"menu-content\"]/li[7]/a/span")  WebElement Buyertab;
+	@FindBy(xpath = "//*[@id=\"nav-tabContent\"]/div/div/div[1]/div/ol/div[2]/a")  WebElement Createnewlist;
+	@FindBy(id= "dealership_name")  WebElement dealership_name;
+	@FindBy(id= "street_address")  WebElement street_address;
+	@FindBy(id= "main_tel_number")  WebElement main_tel_number;
+	@FindBy(id= "website")  WebElement website;
+	@FindBy(id= "supplier_type")  WebElement supplier_type;
+	@FindBy(name= "dealer_make")  WebElement dealer_make;
+	@FindBy(id= "dealer_code")  WebElement dealer_code;
+	@FindBy(id= "dealer_markup_ordered")  WebElement dealer_markup_ordered;
+	@FindBy(id= "dealer_markup_stock")  WebElement dealer_markup_stock;
+	@FindBy(id= "courtesy_delivery_fee")  WebElement courtesy_delivery_fee;
+	@FindBy(id= "registration_service_fee")  WebElement registration_service_fee;
+	@FindBy(id= "sc_first_name")  WebElement sc_first_name;
+	
+	public void Supplierstab() throws InterruptedException 
+	 {
+		Supplierstab.click();
+	     Thread.sleep(1000);
+	     log.info("Click on Supplierstab tab");
+	     System.out.println("Click on Supplierstab tab");
+	 }
+	
+	
+
+
+}

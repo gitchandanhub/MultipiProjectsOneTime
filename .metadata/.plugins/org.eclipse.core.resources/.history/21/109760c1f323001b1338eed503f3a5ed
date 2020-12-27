@@ -1,0 +1,9 @@
+driverpath=C:\\Users\\schandan\\Desktop\\Functional suites\\AcumenR3Suite2\\chromedriver.exe
+eClockurl=http://ih20.acumenport.com/AcumenQA/R3/ClockView/index.aspx
+wClockurl=http://ih20.acumenport.com/AcumenQA/R3/webclock/
+adminuser=adminqa
+adminpsw=adminqa
+empuser=0303
+emppwd=0303
+supuser=0202
+suppwd=0202

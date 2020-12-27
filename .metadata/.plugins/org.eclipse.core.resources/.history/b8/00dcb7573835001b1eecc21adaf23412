@@ -1,0 +1,40 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class singlequote extends AppDriver
+
+{
+	public singlequote()
+	{
+		 PageFactory.initElements(driver, this);
+	}	 
+	
+	@FindBy(xpath = "//*[@id=\'menu-content\']/li[3]/a")  WebElement Quotaiontab;
+	@FindBy(id= "quote_selection")  WebElement QuoteSelection;
+	
+	
+	public void OpenQuotationtab() throws InterruptedException
+	 
+	 {
+		 Quotaiontab.click();
+		 Thread.sleep(1000);
+	     log.info("Quotation Tab clicked");
+	     System.out.println("Quotation Tab clicked");
+	 }
+	
+	public void Quotetypeselection() throws InterruptedException 
+	 {
+		 QuoteSelection.click();
+	     Thread.sleep(1000);
+	     log.info("Quotation Selection options opened");
+	     System.out.println("Quotation Selection option opened");
+	 }
+	
+	
+	
+}

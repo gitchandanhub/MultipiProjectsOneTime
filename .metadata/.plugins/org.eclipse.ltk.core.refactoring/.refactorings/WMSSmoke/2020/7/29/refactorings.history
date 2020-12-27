@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Loginpage.java&apos; to &apos;Practicewms/src/test/java/WMSTest&apos;&#x0D;&#x0A;- Original project: &apos;WMSSmoke&apos;&#x0D;&#x0A;- Destination element: &apos;Practicewms/src/test/java/WMSTest&apos;&#x0D;&#x0A;- Original element: &apos;Pages.Loginpage.java&apos;" description="Copy compilation unit" destination="=Practicewms/src\/test\/java&lt;WMSTest" element1="/src\/test\/java&lt;Pages{Loginpage.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1595074684873" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,71 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import BaseDriver.AppDriver;
+
+public class Createmultiplequotefordifferentvehicle extends AppDriver
+{
+	public Createmultiplequotefordifferentvehicle()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath = "//span[contains(text(),'Quotations')]") WebElement Quotationtab;
+	@FindBy(xpath = "//a[@id='quote_selection']") WebElement createnewbtn;
+	@FindBy(xpath = "//body/div[@id='container-fluid-main']/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/h5[3]/input[1]") 
+	WebElement multiquotemultivehicle;
+	@FindBy(xpath = "//button[@id='submit_selection']") WebElement submitbtn;
+//Customer Data
+	@FindBy(id ="sales_person") WebElement sales_person;
+	@FindBy(id = "customer_id") WebElement customer_no;
+	@FindBy(id = "customer_name") WebElement customer_name;
+	@FindBy(id = "customer_address") WebElement customer_address1;
+	@FindBy(id = "customer_address_2") WebElement customer_address_2;
+	@FindBy(id = "customer_city") WebElement customer_city;
+	@FindBy(id = "customer_state") WebElement customer_state;
+	@FindBy(id = "customer_zip") WebElement customer_zip;
+	@FindBy(id = "contact_name_1") WebElement contact_name_1;
+	@FindBy(id = "email_address") WebElement email_address;
+	@FindBy(id = "cell_tel") WebElement cell_tel;
+	@FindBy(id = "work_tel") WebElement work_tel;
+	
+	
+	@FindBy(id = "sales_tax_state") WebElement sales_tax_state;
+	@FindBy(id = "SalesTaxRateState ") WebElement SalesTaxRateState;
+	@FindBy(id = "") WebElement
+	
+	public void clickonQuotationTab()
+	{
+		Quotationtab.click();
+		log.info("Quotation Tab clicked");
+	    System.out.println("Quotation Tab clicked");
+	}
+	public void clickonCreateNew()
+	{
+		createnewbtn.click();
+		log.info("Create New button clicked");
+	    System.out.println("Create New button clicked");
+	}
+	public void selectCreateMultipleQuoteForDifferentVehicle()
+	{
+		multiquotemultivehicle.click();
+		log.info("Create Multiple Quote For Different Vehicle Radio button selected");
+	    System.out.println("Create Multiple Quote For Different Vehicle Radio button selected");
+	}
+	public void clickonSubmitButton()
+	{
+		submitbtn.click();
+		log.info("clicked on Submit Button");
+	    System.out.println("clicked on Submit Button");
+	}
+	
+	public void selectSalesPerson()
+	{
+		Select salesperson = new Select(sales_person);
+		salesperson.selectByIndex(1);
+	}
+}

@@ -1,0 +1,70 @@
+package Execution;
+
+import java.io.IOException;
+
+import org.testng.annotations.Listeners;
+
+
+
+import org.testng.annotations.Test;
+
+import BaseDriver.AppDriver;
+import Pages.ContactUs;
+import Pages.Homepage;
+import Utility.ExcelUtility;
+import Utility.NavigateUrl;
+import Utility.Verifylinks;
+
+
+@Listeners(Listen.TestNG_Listeners.class)
+public class ExecuteTest extends AppDriver
+{
+	@Test(priority =0)
+	public void verifylinks() throws InterruptedException
+	{
+		 Verifylinks obj = new Verifylinks();
+   	  NavigateUrl nuobj = new NavigateUrl();
+   	  try {
+   	  obj.linktest();
+   	  
+   	  }
+   	  catch(Exception e)
+   	  {
+   		  
+   	  }
+   	  
+   	 // nuobj.openurl();
+   	  
+	}
+	
+	
+   @Test(priority = 1)
+   public void verifyContactus() throws InterruptedException, IOException
+   {
+	   Homepage hpobj = new Homepage();
+	   hpobj.contactusclick();
+	   System.out.println("Contact us page opened");
+	   ContactUs cuobj = new ContactUs();
+	   String name = ExcelUtility.readexcel(config.getProperty("Excelpath"), 0, 1, 0);
+	   cuobj.Enterfname(name);
+	   String lname = ExcelUtility.readexcel(config.getProperty("Excelpath"), 0, 1, 1);
+	   cuobj.EnterLname("Singh");
+	   String email = ExcelUtility.readexcel(config.getProperty("Excelpath"), 0, 1, 2);
+	   cuobj.EnterEmail("schandan.pisoftek@gmail.com");
+	   String comp = ExcelUtility.readexcel(config.getProperty("Excelpath"), 0, 1, 3);
+	   cuobj.EnterCompanyName("PI SOftek");
+	   String phn = ExcelUtility.getATdata(config.getProperty("Excelpath"), 0, 1, 4);
+	   
+	   cuobj.EnterPhonenumber("7835950528");
+	   String con = ExcelUtility.readexcel(config.getProperty("Excelpath"), 0, 1, 5);
+	   cuobj.SelectCountry("India");
+	   String sub = ExcelUtility.readexcel(config.getProperty("Excelpath"), 0, 1, 6);
+	   cuobj.EnterSubject("This is for testing purpose only");
+	   String inqt = ExcelUtility.readexcel(config.getProperty("Excelpath"), 0, 1, 7);
+	   cuobj.SelectInquiryType("Partner Interest");
+	   String msg = ExcelUtility.readexcel(config.getProperty("Excelpath"), 0, 1, 8);
+	   cuobj.EnterMessage("This is my test for message");
+	   cuobj.Clickcheckbox();
+	   cuobj.clicksend();
+   }
+}

@@ -1,0 +1,65 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class Tabasset extends AppDriver
+
+
+{
+
+	public Tabasset()
+	{
+		 PageFactory.initElements(driver, this);
+	}	 
+	
+	@FindBy(xpath = "//span[contains(text(),'Assets')]")  WebElement Assetstab;
+	
+	@FindBy(id= "cf_1_value")  WebElement CustomerForm1;
+	 @FindBy(id= "cf_2_value")  WebElement CustomerForm2;
+	 @FindBy(id= "cf_3_value")  WebElement CustomerForm3;
+	 
+	 @FindBy(id= "owner_name")  WebElement Ownername;
+	 @FindBy(id= "owner_email")  WebElement Owneremail;
+	 @FindBy(id= "owner_address_1")  WebElement Owneradd1;
+	 @FindBy(id= "owner_address_2")  WebElement Owneradd2;
+	 @FindBy(id= "owner_city")  WebElement Ownercity;
+	 @FindBy(xpath= "//*[@id=\"form-edit-vehicle\"]/div/div/div/div[3]/div[4]/div[2]/div/div/div/button/div/div/div")  WebElement Ownerstateoption;
+	 @FindBy(xpath= "//*[@id=\"bs-select-1-52\"]/span")  WebElement Selectownerstate;
+	 @FindBy(id= "owner_zip")  WebElement Ownerzip;
+	
+	 
+	 
+	 @FindBy(id= "edit_vehicle_details")  WebElement SaveassetsVF;
+	 
+	 
+	 @FindBy(xpath = "//*[@id=\"nav-tabContent\"]/div/div/div[2]/ul/li[2]/a")  WebElement Assetsregistration;
+	 
+	 @FindBy(id= "title_number")  WebElement Titlenumber;
+	 @FindBy(xpath= "//*[@id=\"form-vehicle-registration\"]/div[2]/div[2]/div/button/div/div/div")  WebElement Tiltlestateopptions;
+	 @FindBy(xpath= "//*[@id=\"bs-select-1-52\"]/span")  WebElement Selecttiltlestate;
+	 @FindBy(id= "paper_elec")  WebElement Paperelec;
+	 
+	 @FindBy(id= "edit_vehicle_registration")  WebElement SaveassetsRF;
+
+	 @FindBy(xpath= "//*[@id=\"nav-tabContent\"]/div/div/div[1]/div/ol/div[3]/a")  WebElement ShowlistAsset;
+	
+	
+	public void openassettab() throws InterruptedException 
+	
+	{
+		
+		Assetstab.click();
+		
+		log.info("Asset Tab is opened with all assets list");
+        System.out.println("Asset Tab is opened with all assets list");
+		
+	}
+	
+	
+	
+	
+}

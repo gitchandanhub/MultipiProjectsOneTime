@@ -1,0 +1,18 @@
+package Pages;
+
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class Assets1 extends AppDriver
+
+
+
+{
+	public Assets1()
+	{
+		 PageFactory.initElements(driver, this);
+		 
+	    		
+	}
+}

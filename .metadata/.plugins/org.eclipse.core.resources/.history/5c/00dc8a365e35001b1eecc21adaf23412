@@ -1,0 +1,16 @@
+package Pages;
+
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class TabLease extends AppDriver
+
+{
+	
+	public TabLease()
+	{
+		 PageFactory.initElements(driver, this);
+	}
+
+}

@@ -1,0 +1,17 @@
+package Pages;
+
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class singlequoteapproval extends AppDriver
+
+{
+
+	public singlequoteapproval()
+	{
+		 PageFactory.initElements(driver, this);
+	}
+	
+	
+}

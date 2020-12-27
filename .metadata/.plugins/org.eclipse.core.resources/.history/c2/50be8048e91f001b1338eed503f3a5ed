@@ -1,0 +1,224 @@
+package Execution;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import BaseDriver.AppDriver;
+import Pages.Createsinglequote;
+import Pages.Login;
+import Pages.Approvesinglequote;
+import Pages.Converttoleasesinglequote;
+import Pages.Leasetabs;
+import Pages.Assets;
+
+@Listeners(Listen.TestNG_Listeners.class)
+
+
+public class TestCaseExecution extends AppDriver
+
+{
+	AtomicInteger count = new AtomicInteger(1);
+	
+	@Test(priority=0)
+	 public void LoginTest() throws InterruptedException
+    {
+    Login  lpobj = new Login();
+    lpobj.Enterusername(config.getProperty("Username"));
+    lpobj.Enterpsswrd(config.getProperty("Password"));
+    lpobj.clickbtn();
+    
+    }	
+	
+	@Test(priority=1)
+	
+	public void CreateSingleQuote() throws InterruptedException
+    {
+    Createsinglequote  lpobj = new Createsinglequote();
+    
+    
+    lpobj.OpenQuotationtab(null);
+    lpobj.Quotetypeselection(null);
+    lpobj.Selectsinglequote(null);
+    lpobj.SubmitSinglequote(null);
+    lpobj.Salespersonoptions(null);
+  //Customer Data
+    
+    lpobj.Selectsalespersonasadmin(null);
+    lpobj.EnterCustomerNumber(config.getProperty("CusotmerNumber"));;
+    lpobj.EnterCustomerName(null);
+    
+    lpobj.EnterCustomerAddress(config.getProperty("CustomerAdd"));
+    lpobj.EnterCustomerAddress2(config.getProperty("CustomerAdd1"));
+    lpobj.EnterCustomerCity(config.getProperty("CustomerCity"));
+    
+    lpobj.stateoptions(null);
+    lpobj.selectstate(null);
+    lpobj.EnterCustomerZip(config.getProperty("CustomerZip"));
+    lpobj.CustomerContactname(config.getProperty("ContactName"));
+    lpobj.CustomerContactemail(config.getProperty("EmailAddress"));
+    lpobj.CustomerContactcellno(config.getProperty("CellNo"));
+    
+    //Lease Data
+    lpobj.EnterDelAcqDate(config.getProperty("DelAcqDate"));
+    lpobj.LeaseTypeoptions(null);
+    lpobj.Selectmaittype(null);
+    
+    //Term and salestax
+    
+    lpobj.CustomerTerm(null);
+    lpobj.Termselected(null);
+    lpobj.Salestaxstateoptions(null);
+    lpobj.SelectSalestaxstate(null);
+    lpobj.Salestaxrate(config.getProperty("SalesTaxRateState"));
+    
+    
+   //Vehicle Data
+    
+    lpobj.Vehicleyearoption(null);
+    lpobj.selectVehicleyear(null);
+    
+    lpobj.Vehiclemakeoption(null);
+    lpobj.selectvehiclemake(null); 
+    
+    lpobj.vehiclemodeloptions(null);
+    lpobj.selectvehiclemodel(null);  
+    
+    lpobj.vehiclenewusedoptions(null);
+    lpobj.selectusedvehicleoption(null);   
+    lpobj.vehiclecoloroption(null);
+    lpobj.selectvehiclecolor(null);
+    lpobj.vehicleintcoloroption(null);
+    lpobj.selectvehicleintcolor(null);
+    lpobj.vehicleordertypeoption(null);
+    lpobj.vehiclestateoption(null);
+    lpobj.selectvehiclestate(null);  
+    lpobj.vehicleplatetypeoption(null);
+    lpobj.selectvehicleplatetype(null);
+    
+    //Rates
+    
+    lpobj.factorymsrp(config.getProperty("FactoryMSRP"));
+    lpobj.additionalmsrp(config.getProperty("AdditionalMSRP"));
+    lpobj.delaercost(config.getProperty("DealerCost"));
+    lpobj.Bankfees(config.getProperty("BankFee"));
+    lpobj.residualvaule(config.getProperty("ResidualValue"));
+    lpobj.customercustomnote(config.getProperty("Cusomternotes"));
+    
+    //Save Single Quote
+    
+    lpobj.savesinglequote(null);
+ 
+    }	
+	
+	/*
+	
+  	@Test(priority=2)
+  	
+  	
+  	
+  	public void Approvesinglequote() throws InterruptedException
+     {
+  		Approvesinglequote lpobj = new Approvesinglequote();
+  		
+  		
+  		lpobj.OpenQuotationtab(null);
+  		lpobj.Clickactiveprospecttab(null);
+  		lpobj.Editsinglequote(null);
+  		lpobj.Approvesinglequotation(null);
+		
+      }
+   		
+  	
+  	@Test(priority=3)
+  		
+  	public void Converttoleasesinglequote() throws InterruptedException
+     {
+  		Converttoleasesinglequote lpobj = new Converttoleasesinglequote();
+  		
+  		lpobj.Showlisteditquotescreen(null);
+  		lpobj.Activeprospectgain(null);
+  		lpobj.Editapprovedquote(null);
+  		lpobj.Converttoleaseasq(null);
+  		lpobj.ConfirmConverttoleaseasq(null);
+  	
+  		
+      }
+  	
+  	@Test(priority=4)
+		
+  	public void Leasetabs() throws InterruptedException
+     {
+  		Leasetabs lpobj = new Leasetabs();
+  		
+  		lpobj.SelectLeasetab(null);
+  		lpobj.Openlatestlease(null);
+  		lpobj.Openleaseaccountingsheet(null);
+  		lpobj.Openleasebanksheet(null);
+  		lpobj.Selectbankfromlistbanksheet(null);
+  		lpobj.Saveleasebanksheet(null);
+  		
+  		lpobj.leasescheduleAtab(null);
+  		lpobj.UploadscheduleA(null);
+  		lpobj.Uploadschedulefindfile(null);
+  		lpobj.SubmituploadfilescheA(null);
+  		
+  		
+  		lpobj.Openleasecoitab(null);
+  		lpobj.Uploadinsurancecrtcoi(null);
+  		lpobj.Chooseinsurancecerticoi(null);
+  		lpobj.SubmitICcoi(null);
+  		
+  		
+  		lpobj.OpenleaseBAsheet(null);
+  		lpobj.OpenleasepayoffALS(null);
+  		lpobj.Openleasepayoffcustom(null);
+  		lpobj.Openleasepayoffbank(null);
+  		lpobj.Openleasebillofsale(null);
+  		lpobj.OpenleaseAccounting(null);
+  		
+  		
+  		lpobj.Openleaseendofsale(null);
+  		lpobj.Uploadendofsaledoc(null);
+  		lpobj.Chooseendofsaledoc(null);
+  		lpobj.SubmitEOSdoc(null);
+  		
+  		lpobj.Clickshowlistbutton(null);
+  		
+      }
+  	
+	@Test(priority=5)
+	
+  	public void Assets() throws InterruptedException
+     {
+		Assets lpobj = new Assets();
+     
+		lpobj.OpenAssettab(null);		
+		lpobj.openlatestasset(null);
+		lpobj.customCFvaule1(null);
+		lpobj.customCFvaule2(null);
+		lpobj.customCFvaule3(null);
+		
+		lpobj.OwnernameROI(null);
+		lpobj.OwneremailROI(null);
+		lpobj.Owneradd1ROI(null);
+		lpobj.Owneradd2ROI(null);
+		lpobj.OwnercityROI(null);
+		lpobj.OwnerstateoptionROI(null);
+		lpobj.SelectownerstateROI(null);
+		lpobj.OwnerzipROI(null);
+		
+		
+		lpobj.Saveassetvehform(null);
+		
+		lpobj.OpenassetRegtab(null);
+		lpobj.Addtitlenumber(null);
+		lpobj.Titlestateoptions(null);
+		lpobj.Selecttitlestate(null);
+		lpobj.Addpaperelec(null);
+		lpobj.SaveAssetRegform(null);
+		
+		lpobj.Showlistasset(null);
+     }
+       */
+}

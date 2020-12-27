@@ -1,0 +1,30 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class TabLease extends AppDriver
+
+{
+	
+	public TabLease()
+	{
+		 PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(xpath = "//*[@id=\"menu-content\"]/li[3]/a")  WebElement Leasetab;
+	
+public void leasetab() throws InterruptedException
+    
+    {
+    	Leasetab.click();
+	     Thread.sleep(2000);
+	     log.info("Clicked on Lease Tab and all lease List are loaded");
+        System.out.println("Clicked on Lease Tab and all lease are loaded");
+    }
+	
+	
+}

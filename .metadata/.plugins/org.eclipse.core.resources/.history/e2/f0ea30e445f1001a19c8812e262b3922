@@ -1,0 +1,24 @@
+#Url = https://162.255.233.19:8443/NorthstarWMS-GR9/login.aspx 
+#Username = GR9
+#Password = welcome@1
+
+Url = https://192.168.20.28/NorthStarWMS/
+Username = wms
+Password = welcome@1
+
+
+
+BrowserName = Chrome
+#BrowserName = Firefox
+#BrowserName = IE
+
+Chropath = ./Driver\\chromedriver.exe
+ChromeDriver_path =  ./Driver\\chromedriver.exe
+FireFoxDriver_path = ./Driver\\geckodriver.exe
+
+IEDriver_path =  ./Driver\\IDDriverServer.exe
+
+ExtentReport_path = ./Report\\
+
+Shipmentnumber = CSCSO02
+

@@ -1,0 +1,43 @@
+package EEExecution;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.externalconfig.model.Config;
+
+import Base.BaseDriver;
+import pagescreen.ForgotPasswordPage;
+import pagescreen.Loginpage;
+import utility.ExcelUtility;
+
+public class ExecuteForgotPassword  extends BaseDriver
+{
+	Loginpage lpobj;  
+	public ExecuteForgotPassword()
+	{
+		super();
+		lpobj =  new Loginpage();  
+		
+	}
+	@Test
+	public void exeforgotpwd() throws IOException, InterruptedException
+	{
+		//lpobj.clickforgotpassword();
+		driver.get("https://secure.isconcepts.com/helpdeskQA/forgetpassword.aspx");
+		
+		ForgotPasswordPage fppobj = new ForgotPasswordPage();
+		fppobj.enterUserName(ExcelUtility.readexcel(config.getProperty("forgotpwd"), 0, 1, 0));
+		Thread.sleep(1000);
+		log.info("UserName Entered");
+		fppobj.enterEmailAddress(ExcelUtility.readexcel(config.getProperty("forgotpwd"), 0, 1, 1));
+		Thread.sleep(1000);
+		log.info("EmailAddress Entered");
+		//fppobj.clickonClear();
+		fppobj.clickonSubmit();
+		Thread.sleep(2000);
+		WebElement message = driver.findElement(By.xpath("//span[@id='lbl_error']"));
+		System.out.println(message.getText());
+
+	}
+}

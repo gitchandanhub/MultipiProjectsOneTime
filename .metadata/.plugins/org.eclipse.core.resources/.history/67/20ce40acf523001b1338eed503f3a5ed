@@ -1,0 +1,49 @@
+package stepDef;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class UtilityDriver
+{
+   public static WebDriver driver = null;
+   public static void inibrowser()
+   {
+      if(driver == null)
+     {
+    	// To run tests with Chrome browser 
+    	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\bprateek\\Desktop\\Functional suites\\AcumenR3Smokenew\\Driver\\chromedriver.exe");
+      driver = new ChromeDriver();
+      	
+      	// To run tests with FF browser  
+     	//System.setProperty("webdriver.gecko.driver", "D:\\AUTO\\\\geckodriver.exe");
+     	//driver = new FirefoxDriver();
+     		
+     } 
+     
+      
+     
+      
+       else
+       {
+         System.out.println("driver already initialized");
+       }
+    try{
+       driver.manage().timeouts().implicitlyWait(250, TimeUnit.SECONDS);
+    }
+    catch(Exception e)
+    {
+    	System.out.println("Driver ont responding");
+    	driver.switchTo().activeElement();
+    	driver.close();
+    	
+    }
+       driver.manage().window().maximize();
+     }
+      public static void close()
+        {
+             driver.close(); 
+        }
+  }

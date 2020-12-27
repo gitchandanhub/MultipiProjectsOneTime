@@ -1,0 +1,50 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class CreateSupplierRecord extends AppDriver
+
+
+{
+
+	
+	public CreateSupplierRecord()
+	{
+		 PageFactory.initElements(driver, this);
+	}	 
+	
+	@FindBy(xpath = "//body/div[@id='container-fluid-main']/div[2]/div[1]/div[1]/div[1]/ul[1]/li[6]/a[1]/span[1]")  WebElement Supplierstab;
+	@FindBy(xpath = "//body/div[@id='container-fluid-main']/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/ol[1]/div[2]/a[1]")  WebElement Createnewlist;
+	@FindBy(id= "dealership_name")  WebElement dealership_name;
+	@FindBy(id= "street_address")  WebElement street_address;
+	@FindBy(id= "main_tel_number")  WebElement main_tel_number;
+	@FindBy(id= "website")  WebElement website;
+	@FindBy(id= "supplier_type")  WebElement supplier_type;
+	@FindBy(name= "dealer_make")  WebElement dealer_make;
+	@FindBy(id= "dealer_code")  WebElement dealer_code;
+	@FindBy(id= "dealer_markup_ordered")  WebElement dealer_markup_ordered;
+	@FindBy(id= "dealer_markup_stock")  WebElement dealer_markup_stock;
+	@FindBy(id= "courtesy_delivery_fee")  WebElement courtesy_delivery_fee;
+	@FindBy(id= "registration_service_fee")  WebElement registration_service_fee;
+	@FindBy(id= "sc_first_name")  WebElement sc_first_name;
+	@FindBy(id= "sc_last_name")  WebElement sc_last_name;
+	@FindBy(id= "sc_title")  WebElement sc_title;
+	@FindBy(id= "sc_work_phone")  WebElement sc_work_phone;
+	@FindBy(id= "sc_email_address")  WebElement sc_email_address;
+	@FindBy(id= "sc_street_address")  WebElement sc_street_address;
+	@FindBy(id= "sc_city")  WebElement sc_city;
+	@FindBy(id= "sc_state")  WebElement sc_state;
+	@FindBy(id= "sc_zip")  WebElement sc_zip;
+	@FindBy(id= "city")  WebElement city;
+	@FindBy(id= "zip")  WebElement zip;
+	@FindBy(id= "save_customer")  WebElement save_customer;
+	@FindBy(id= "state")  WebElement customer_state;
+
+
+
+
+}

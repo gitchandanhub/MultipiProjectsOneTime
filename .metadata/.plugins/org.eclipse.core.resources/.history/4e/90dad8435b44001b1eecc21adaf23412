@@ -1,0 +1,58 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import BaseDriver.AppDriver;
+
+public class CreateBuyersRecord extends AppDriver
+
+
+{
+
+	
+	public CreateBuyersRecord()
+	{
+		 PageFactory.initElements(driver, this);
+	}	 
+	
+	@FindBy(xpath = "//*[@id=\"menu-content\"]/li[7]/a/span")  WebElement Buyertab;
+	@FindBy(xpath = "//*[@id=\"nav-tabContent\"]/div/div/div[1]/div/ol/div[2]/a")  WebElement Createnewlist;
+	@FindBy(id= "buyer_name")  WebElement buyer_name;
+	@FindBy(id= "street_address")  WebElement street_address;
+	@FindBy(id= "city")  WebElement city;
+	@FindBy(id= "state")  WebElement state;
+	@FindBy(id= "zip")  WebElement zip;
+	@FindBy(name= "website")  WebElement website;
+	@FindBy(id= "buyer_type")  WebElement buyer_type;
+	@FindBy(id= "sc_last_name")  WebElement sc_last_name;
+	@FindBy(id= "sc_title")  WebElement sc_title;
+	@FindBy(id= "sc_mobile")  WebElement sc_mobile;
+	@FindBy(id= "sc_email_address")  WebElement sc_email_address;
+	@FindBy(id= "sc_street_address")  WebElement sc_street_address;
+	@FindBy(id= "sc_city")  WebElement sc_city;
+	@FindBy(id= "sc_state")  WebElement sc_state;
+	@FindBy(id= "sc_zip")  WebElement sc_zip;
+	@FindBy(id= "ac_first_name")  WebElement ac_first_name;
+	@FindBy(id= "ac_last_name")  WebElement ac_last_name;
+	@FindBy(id= "ac_title")  WebElement ac_title;
+	@FindBy(id= "ac_mobile")  WebElement ac_mobile;
+	@FindBy(id= "ac_email_address")  WebElement ac_email_address;
+	@FindBy(id= "ac_city")  WebElement ac_city;
+	@FindBy(id= "ac_state")  WebElement ac_state;
+	@FindBy(id= "ac_zip")  WebElement ac_zip;
+	
+	
+	public void Supplierstab() throws InterruptedException 
+	 {
+		Supplierstab.click();
+	     Thread.sleep(1000);
+	     log.info("Click on Supplierstab tab");
+	     System.out.println("Click on Supplierstab tab");
+	 }
+	
+	
+
+
+}

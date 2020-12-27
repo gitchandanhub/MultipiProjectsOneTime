@@ -1,0 +1,55 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import BaseDriver.AppDriver;
+
+public class Createmultiplequotefordifferentvehicle extends AppDriver
+{
+	public Createmultiplequotefordifferentvehicle()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath = "//span[contains(text(),'Quotations')]") WebElement Quotationtab;
+	@FindBy(xpath = "//a[@id='quote_selection']") WebElement createnewbtn;
+	@FindBy(xpath = "//body/div[@id='container-fluid-main']/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/h5[3]/input[1]") 
+	WebElement multiquotemultivehicle;
+	@FindBy(xpath = "//button[@id='submit_selection']") WebElement submitbtn;
+//Customer Data
+	@FindBy(id ="sales_person") WebElement sales_person;
+	
+	public void clickonQuotationTab()
+	{
+		Quotationtab.click();
+		log.info("Quotation Tab clicked");
+	    System.out.println("Quotation Tab clicked");
+	}
+	public void clickonCreateNew()
+	{
+		createnewbtn.click();
+		log.info("Create New button clicked");
+	    System.out.println("Create New button clicked");
+	}
+	public void selectCreateMultipleQuoteForDifferentVehicle()
+	{
+		multiquotemultivehicle.click();
+		log.info("Quotation Tab clicked");
+	    System.out.println("Quotation Tab clicked");
+	}
+	public void clickonQuotationTab()
+	{
+		Quotationtab.click();
+		log.info("Quotation Tab clicked");
+	    System.out.println("Quotation Tab clicked");
+	}
+	
+	public void selectSalesPerson()
+	{
+		Select salesperson = new Select(sales_person);
+		salesperson.selectByIndex(1);
+	}
+}

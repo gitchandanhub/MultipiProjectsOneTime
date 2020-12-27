@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="259860" started-at="2020-08-05T09:50:30Z" finished-at="2020-08-05T09:54:49Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="259860" started-at="2020-08-05T09:50:30Z" finished-at="2020-08-05T09:54:49Z">
+      <class name="Execution.TestCases">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:Execution.TestCases@36f6e879]" name="Initialize" is-config="true" duration-ms="9003" started-at="2020-08-05T15:20:30Z" finished-at="2020-08-05T15:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method status="PASS" signature="verifylinks()[pri:0, instance:Execution.TestCases@36f6e879]" name="verifylinks" duration-ms="247306" started-at="2020-08-05T15:20:39Z" finished-at="2020-08-05T15:24:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifylinks -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Execution.TestCases@36f6e879]" name="close" is-config="true" duration-ms="3466" started-at="2020-08-05T15:24:46Z" finished-at="2020-08-05T15:24:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- Execution.TestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

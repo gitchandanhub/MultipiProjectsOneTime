@@ -1,0 +1,26 @@
+@validations
+Feature: Process validation scenarios: Timeoff approval cycle, Punch and Benifit
+
+  
+
+  @BenifitProcess
+  Scenario: complete Beneft process
+    Given Launch Browser and Open eClock
+    When Enter valid credentials and click login
+    Then click on webclock from side menu
+    Then Admin go to configure benefits
+    Then select benifit and check Negatives for vaction oneyear
+    Then check Dont allow negative balance
+    Then Go to Employee Employees and select employee to check Employee eligibily
+    When Employee Hire Date  is lessthan oneyear
+    Then Go to Employee Employee Benefits and set balance update
+    Then Go to Time card Timeoffrequest Add time off
+    Then select vacatoin one year and apply time off with hours more than balance
+    Then Go to Time card Timeoffrequest Add time off
+    Then select vacatoin one year and apply time off with hours less than balance
+    Then Loggedout successfully
+    Given Launch Browser and Open eClock
+    When Enter valid supervisor credentials and click login
+    Then Go to time card Time off approval and select employee
+    Then select timeoff details and approve
+    Then Go to Employee Benifit and check benifit balance

@@ -1,0 +1,72 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import BaseDriver.AppDriver;
+
+public class Approvingsinglequote1 extends AppDriver
+
+{
+	public Approvingsinglequote1()
+	{
+		 PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath = "//*[@id=\\'menu-content\\']/li[3]/a")  WebElement SwitchQuotaiontab;
+	@FindBy(xpath = "//a[contains(text(),'Active Prospects')]")  WebElement ClickActiveprospect;
+	@FindBy(xpath = "//*[@id=\"DataTables_Table_0\"]/tbody/tr[1]/td[10]/a[2]")  WebElement EditSingleQuote;
+	@FindBy(xpath= "//*[@id=\"cotb_edit\"]/div[5]/div/table/tbody/tr[5]/td/button/i")  WebElement ApprovesingQuotation;
+	
+	
+	public void OpenQuotationtab1(String test) throws InterruptedException
+	{
+		SwitchQuotaiontab.click();
+	     Thread.sleep(3000);
+	     log.info("Quotation Tab clicked for refresh");
+        System.out.println("Quotation Tab clicked for refresh");
+	}
+	
+	
+	
+	 
+	
+	
+	public void Clickactiveprospecttab1(String clickactiveprosp) throws InterruptedException 
+{
+		ClickActiveprospect.click();
+	    Thread.sleep(2000);
+	    log.info("Quotation Active prospect is opened");
+	    System.out.println("Quotation Active prospect is opened");
+   
+	   
+	 }	
+	
+public void Editsinglequote1(String editsingquote) throws InterruptedException 
+	 {
+		EditSingleQuote.click();
+	     Thread.sleep(2000);
+	     log.info("Newly created Quotation is opened in Edit Mode for approval");
+	     System.out.println("Newly created Quotation is opened in Edit Mode");   
+	   
+	 }
+	
+public void Approvesinglequotation1(String Apprsinglequotation) throws InterruptedException 
+{ 
+	//Actions hoverApprovebutton = new Actions(driver);
+	//WebElement Approvebutton = driver.findElement(By.xpath("//*[@id=\"cotb_edit\"]/div[5]/div/table/tbody/tr[5]/td/button"));
+	//hoverApprovebutton.moveToElement(Approvebutton);
+	//Approvebutton.click();
+	ApprovesingQuotation.click();
+    Thread.sleep(3000);
+    log.info("Newly created Quotation is now Approved");
+    System.out.println("Newly created Quotation is now Approved");   
+  
+}
+
+	
+
+}

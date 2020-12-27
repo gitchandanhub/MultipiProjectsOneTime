@@ -1,0 +1,126 @@
+@validations
+Feature: Process validation scenarios: Timeoff approval cycle, Punch and Benifit
+
+  
+  @benifit
+  Scenario: Benefit ON login as admin and check negative benefit on
+    Given Launch Browser and Open eClock
+    When Enter valid credentials and click login
+    Then click on webclock from side menu
+    Then clcik on Configure
+    Then Clcik on View benefits
+    Then check negative benefit options ON
+    Then Loggedout successfully
+    Given Launch Browser and Open eClock
+    When Enter valid Employee credentials and click login
+    Then User should be able to login successfully
+    Then employee click on employee Employee Time off Request from side bar menu
+    Then Employee add new time off request
+    Then Loggedout successfully
+
+  @benifit
+  Scenario: Benefit OFF login as admin and check negative benefit OFF
+    Given Launch Browser and Open eClock
+    When Enter valid credentials and click login
+    Then click on webclock from side menu
+    Then clcik on Configure
+    Then Clcik on View benefits
+    Then check negative benefit options OFF
+    Then Loggedout successfully
+    Given Launch Browser and Open eClock
+    When Enter valid Employee credentials and click login
+    Then User should be able to login successfully
+    Then employee click on employee Employee Time off Request from side bar menu
+    Then Employee add new time off request
+    Then Loggedout successfully
+
+  @TimePunch1
+  Scenario: TP01:Employee log to webclock punchin and Punchout from webclock
+    Given Launch Browser and Open webClock
+    When enter valid Employee credentials at webclock
+    Then check Punchin
+    Given Launch Browser and Open webClock
+    When enter valid Employee credentials at webclock
+    Then check Break Start
+    Given Launch Browser and Open webClock
+    When enter valid Employee credentials at webclock
+    Then check Break Stop
+    Given Launch Browser and Open webClock
+    When enter valid Employee credentials at webclock
+    Then check Punchout
+    
+
+  @TimePunch2
+  Scenario: TP02:Employee log to eClock and punchin and Punchout from eclock - webclock
+    Given Launch Browser and Open eClock
+    When Enter valid Employee credentials and click login
+    Then User should be able to login successfully
+    Then click on webclock from side menu
+    Then click on Punch in Button
+    Then Clcik on Lunch start
+    Then Clcik on Lunch stop
+    Then Click on Punchout Button
+    Then Loggedout successfully
+
+  @TimePunch3
+  Scenario: TP03:Employee perform break punch
+    Given Launch Browser and Open eClock
+    When Enter valid Employee credentials and click login
+    Then User should be able to login successfully
+    Then click on webclock from side menu
+    Then click on Punch in Button
+    Then Clcik on Break start
+    Then Clcik on Break stop
+    Then Loggedout successfully
+
+  @TimePunch4
+  Scenario: TP04: Supervisor Edit  Punch Time for Employee
+    Given Launch Browser and Open eClock
+    When Enter valid supervisor credentials and click login
+    Then User should be able to login successfully
+    Then Supervisor click on Timecard Timecard
+    Then select Employe and view time entries
+    Then Edit time entry and update
+    Then Loggedout successfully
+
+  @TimePunch5
+  Scenario: TP05: Supervisor Edit  Time card Edit  for Employee
+    Given Launch Browser and Open eClock
+    When Enter valid supervisor credentials and click login
+    Then User should be able to login successfully
+    Then Supervisor click on Timecard Timecard
+    Then select Employe and view time entries
+    Then Edit time entry from Edit window
+    Then Loggedout successfully
+
+  @TimePunch6
+  Scenario: TP06: SupervisorApprove Time card entry of Employee
+    Given Launch Browser and Open eClock
+    When Enter valid supervisor credentials and click login
+    Then User should be able to login successfully
+    Then Supervisor click on Timecard Timecard
+    Then select Employe and view time entries
+    Then Approve entry  and update
+    Then Loggedout successfully
+
+  @BenifitProcess
+  Scenario: complete Beneft process
+    Given Launch Browser and Open eClock
+    When Enter valid credentials and click login
+    Then click on webclock from side menu
+    Then Admin go to configure benefits
+    Then select benifit and check Negatives for vaction oneyear
+    Then check Dont allow negative balance
+    Then Go to Employee Employees and select employee to check Employee eligibily
+    When Employee Hire Date  is lessthan oneyear
+    Then Go to Employee Employee Benefits and set balance update
+    Then Go to Time card Timeoffrequest Add time off
+    Then select vacatoin one year and apply time off with hours more than balance
+    Then Go to Time card Timeoffrequest Add time off
+    Then select vacatoin one year and apply time off with hours less than balance
+    Then Loggedout successfully
+    Given Launch Browser and Open eClock
+    When Enter valid supervisor credentials and click login
+    Then Go to time card Time off approval and select employee
+    Then select timeoff details and approve
+    Then Go to Employee Benifit and check benifit balance

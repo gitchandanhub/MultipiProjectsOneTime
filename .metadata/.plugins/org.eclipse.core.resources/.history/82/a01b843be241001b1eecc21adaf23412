@@ -1,0 +1,95 @@
+package Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import BaseDriver.AppDriver;
+
+public class CreateLesseeRecord extends AppDriver
+
+
+{
+
+	
+	public CreateLesseeRecord()
+	{
+		 PageFactory.initElements(driver, this);
+	}	 
+	
+	@FindBy(xpath = "//*[@id=\"menu-content\"]/li[5]/a/span")  WebElement Lesseetab;
+	@FindBy(xpath = "//*[@id=\"nav-tabContent\"]/div/div/div[1]/div/ol/div[3]/a")  WebElement Createnewlist;
+	@FindBy(id= "customer_type")  WebElement Customertype;
+	@FindBy(id= "business_name")  WebElement BusinessName;
+	@FindBy(id= "dba_name")  WebElement dba_name;
+	@FindBy(id= "business_email")  WebElement business_email;
+	@FindBy(id= "first_name")  WebElement first_name;
+	@FindBy(name= "last_name")  WebElement last_name;
+	@FindBy(id= "email_address")  WebElement email_address;
+	@FindBy(id= "phone")  WebElement phone;
+	@FindBy(id= "address_line_1")  WebElement address_line_1;
+	@FindBy(id= "city")  WebElement city;
+	@FindBy(id= "zip")  WebElement zip;
+	@FindBy(id= "save_customer")  WebElement save_customer;
+	@FindBy(id= "state")  WebElement customer_state;
+	
+	public void Lesseetab() throws InterruptedException 
+	 {
+		Lesseetab.click();
+	     Thread.sleep(1000);
+	     log.info("Click on Lessee tab");
+	     System.out.println("Click on Lessee tab");
+	 }
+	
+	public void Createnewlist() throws InterruptedException 
+	 {
+		Createnewlist.click();
+	     Thread.sleep(1000);
+	     log.info("Click on Createnewlist");
+	     System.out.println("Click on Createnewlist");
+	 }
+	
+	public void Customerdetails() throws InterruptedException 
+	 {
+		Customertype.click();
+	     Thread.sleep(1000);
+	     
+	     BusinessName.sendKeys("Travelagency");
+	     Thread.sleep(1000);
+	     dba_name.sendKeys("Travelagency1");
+	     Thread.sleep(1000);
+	     business_email.sendKeys("test@test.com");
+	     Thread.sleep(1000);
+	     first_name.sendKeys("Test1");
+	     Thread.sleep(1000);
+	     last_name.sendKeys("Test2");
+	     Thread.sleep(1000);
+	     email_address.sendKeys("test@test.com");
+	     Thread.sleep(1000);
+	     phone.sendKeys("43234567");
+	     Thread.sleep(1000);
+	     address_line_1.sendKeys("street 1");
+	     Thread.sleep(1000);
+	     city.sendKeys("LA");
+	     Thread.sleep(1000);
+	     zip.sendKeys("234567");
+	     Thread.sleep(1000);
+	     Select selstate = new Select(customer_state);
+		 selstate.selectByIndex(1);
+	     
+		 Thread.sleep(1000);
+	     
+	     save_customer.click();
+	     
+	     log.info("New lessee record  has been created successfully ");
+	     System.out.println("New lessee record has been created successfully");
+	     
+	     
+	     
+	     
+	     
+	 }
+	
+	
+}

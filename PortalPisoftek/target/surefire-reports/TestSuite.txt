@@ -1,0 +1,68 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 6, Time elapsed: 12.275 s <<< FAILURE! - in TestSuite
+Initialize(Execution.TestCases)  Time elapsed: 7.669 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 85
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PIS076', ip: '192.168.20.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: AppDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0106D383+3134339]
+	Ordinal0 [0x00F5A171+2007409]
+	Ordinal0 [0x00DFAEE8+569064]
+	Ordinal0 [0x00D8139F+70559]
+	Ordinal0 [0x00D7CC63+52323]
+	Ordinal0 [0x00DA0DFC+200188]
+	Ordinal0 [0x00DA0C1D+199709]
+	Ordinal0 [0x00D9EB0B+191243]
+	Ordinal0 [0x00D82E77+77431]
+	Ordinal0 [0x00D83E3E+81470]
+	Ordinal0 [0x00D83DC9+81353]
+	Ordinal0 [0x00F70CD9+2100441]
+	GetHandleVerifier [0x011DB75A+1396954]
+	GetHandleVerifier [0x011DB3D9+1396057]
+	GetHandleVerifier [0x011E7126+1444518]
+	GetHandleVerifier [0x011DBCE8+1398376]
+	Ordinal0 [0x00F67F51+2064209]
+	Ordinal0 [0x00F722EB+2106091]
+	Ordinal0 [0x00F72411+2106385]
+	Ordinal0 [0x00F849C4+2181572]
+	BaseThreadInitThunk [0x74D36359+25]
+	RtlGetAppContainerNamedObjectPath [0x773F8944+228]
+	RtlGetAppContainerNamedObjectPath [0x773F8914+180]
+
+
+Initialize(Execution.TestCases)  Time elapsed: 11.405 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 85
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PIS076', ip: '192.168.20.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: AppDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0106D383+3134339]
+	Ordinal0 [0x00F5A171+2007409]
+	Ordinal0 [0x00DFAEE8+569064]
+	Ordinal0 [0x00D8139F+70559]
+	Ordinal0 [0x00D7CC63+52323]
+	Ordinal0 [0x00DA0DFC+200188]
+	Ordinal0 [0x00DA0C1D+199709]
+	Ordinal0 [0x00D9EB0B+191243]
+	Ordinal0 [0x00D82E77+77431]
+	Ordinal0 [0x00D83E3E+81470]
+	Ordinal0 [0x00D83DC9+81353]
+	Ordinal0 [0x00F70CD9+2100441]
+	GetHandleVerifier [0x011DB75A+1396954]
+	GetHandleVerifier [0x011DB3D9+1396057]
+	GetHandleVerifier [0x011E7126+1444518]
+	GetHandleVerifier [0x011DBCE8+1398376]
+	Ordinal0 [0x00F67F51+2064209]
+	Ordinal0 [0x00F722EB+2106091]
+	Ordinal0 [0x00F72411+2106385]
+	Ordinal0 [0x00F849C4+2181572]
+	BaseThreadInitThunk [0x74D36359+25]
+	RtlGetAppContainerNamedObjectPath [0x773F8944+228]
+	RtlGetAppContainerNamedObjectPath [0x773F8914+180]
+
+

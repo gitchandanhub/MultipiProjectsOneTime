@@ -1,0 +1,48 @@
+08/10/2020 02:24:31 devpinoyLogger Username Entered wms
+08/10/2020 02:24:33 devpinoyLogger Password Entered welcome@1
+08/10/2020 02:24:38 devpinoyLogger Login button clicked
+08/10/2020 02:24:49 devpinoyLogger Switched to popup window
+08/10/2020 02:24:55 devpinoyLogger Vendor has been selected
+08/10/2020 02:24:59 devpinoyLogger PO Save button clicked
+08/10/2020 02:25:01 devpinoyLogger Details PO is clicked
+08/10/2020 02:25:13 devpinoyLogger Sales order tab is clicked
+08/10/2020 02:25:13 devpinoyLogger Pick/Pack/Ship is clicked
+08/10/2020 02:25:17 devpinoyLogger Sales order tab is clicked
+08/10/2020 02:25:17 devpinoyLogger SO tab is clicked
+08/10/2020 02:25:19 devpinoyLogger Add button is clicked
+08/10/2020 02:25:19 devpinoyLogger Add button is clicked
+08/10/2020 02:25:25 devpinoyLogger pick type is clicked
+08/10/2020 02:25:27 devpinoyLogger pick type ship order is clicked
+08/10/2020 02:25:28 devpinoyLogger SO save button  is clicked
+08/10/2020 02:25:32 devpinoyLogger SO row has been selected
+08/10/2020 02:25:32 devpinoyLogger Detail SO has been clicked
+08/10/2020 02:25:42 devpinoyLogger Item has been Selected
+08/10/2020 02:25:42 devpinoyLogger Item Quantity has been Entered
+08/10/2020 02:25:44 devpinoyLogger Quick add button has clicked
+08/10/2020 02:26:52 devpinoyLogger New SO added succesfully
+08/10/2020 02:26:52 devpinoyLogger New SO edited succesfully
+08/10/2020 02:26:52 devpinoyLogger New SO deleted succesfully
+08/10/2020 02:27:25 devpinoyLogger New SO created succesfully
+08/10/2020 02:27:25 devpinoyLogger New SO searched succesfully
+08/10/2020 02:27:27 devpinoyLogger SO row has been selected
+08/10/2020 02:27:28 devpinoyLogger Detail SO has been clicked
+08/10/2020 02:27:37 devpinoyLogger Item has been Selected
+08/10/2020 02:27:37 devpinoyLogger Item Quantity has been Entered
+08/10/2020 02:27:48 devpinoyLogger item has been released successfully
+08/10/2020 02:28:32 devpinoyLogger item has been manually picked  successfully
+08/10/2020 02:28:34 devpinoyLogger clicked on un- pick
+08/10/2020 02:28:39 devpinoyLogger Item successfully un-picked
+08/10/2020 02:29:08 devpinoyLogger New SO created succesfully
+08/10/2020 02:29:08 devpinoyLogger New SO searched succesfully
+08/10/2020 02:29:10 devpinoyLogger SO row has been selected
+08/10/2020 02:29:10 devpinoyLogger Detail SO has been clicked
+08/10/2020 02:29:19 devpinoyLogger Item has been Selected
+08/10/2020 02:29:20 devpinoyLogger Item Quantity has been Entered
+08/10/2020 02:29:31 devpinoyLogger item has been released successfully
+08/10/2020 02:29:38 devpinoyLogger clicked on quick pick
+08/10/2020 02:29:45 devpinoyLogger Item has been picked successfully via quick pick button
+08/10/2020 02:30:07 devpinoyLogger Clicked on inventory
+08/10/2020 02:30:50 devpinoyLogger Item added successfully in inventory
+08/10/2020 02:31:41 devpinoyLogger Location/warehouse for item added successfully
+08/10/2020 02:32:12 devpinoyLogger Item deleted successfully from inventory
+08/10/2020 02:33:03 devpinoyLogger Item edited successfully from inventory
